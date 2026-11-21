@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMART CALCULATOR</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <h1>SMART CALCULATOR</h1>
+    <div class="mainbox">
+      <div class="displaybox">
+        <div class="multidisplay"></div>
+        <input type="text" id="display" readonly>
+      </div>
+      <div class="categorybox">
+        <div class="cate-row">
+          <button id="arithmetics">Arithmetics</button>
+          <button id="logical">Logical</button>
+        </div>
+        <div class="cate-row2">
+          <button id="mensuration">Mensuration</button>
+          <button id="binary">Binary</button>
+        </div>
+      </div>
+      <div class="operation" id="operation">
+        <div class="oprow">
+          <button id="addition">+</button>
+          <button id="subtraction">-</button>
+          <button id="multiplication">*</button>
+          <button id="division">/</button>
+          <button id="modulus">%</button>
+        </div>
+      </div>
+      <div class="keypad">
+        <div class="row1">
+          <button id="num7">7</button>
+          <button id="num8">8</button>
+          <button id="num9">9</button>
+          <button class="allc" id="allclear">Ac</button>
+        </div>
+        <div class="row2">
+          <button id="num4">4</button>
+          <button id="num5">5</button>
+          <button id="num6">6</button>
+          <button id="bracket">(_)</button>
+        </div>
+        <div class="row3">
+          <button id="num1">1</button>
+          <button id="num2">2</button>
+          <button id="num3">3</button>
+          <button id="num00">00</button>
+        </div>
+        <div class="row4">
+          <button id="num0">0</button>
+          <button id="point">.</button>
+          <button class="del" id="delete">X</button>
+          <button class="equal" id="result">=</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <py-script type="py" src="main.py"></py-script>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+
+/* =================================1. GLOBAL SETTINGS ================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px 10px;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:radial-gradient(circle at top, #263449, #10151d 55%, #080b10);
+
+  font-family: Arial, sans-serif;
+  color: #f1f5f9;
+}
+
+
+/* =================================
+   2. MAIN CALCULATOR
+================================= */
+
+.main {
+  width: 420px;
+  max-width: 100%;
+  min-height: 585px;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction:column ;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(145deg, #252c36, #11161e
+  );
+
+  border: 2px solid #667384;
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.65),
+    inset 0 1px 2px rgba(255,255,255,0.15);
+}
+
+
+/* =================================
+   3. HEADING
+================================= */
+
+h1 {
+  margin: 5px 0 18px;
+
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+
+  color: #dce6f2;
+
+  text-shadow: 0 2px 8px rgba(80,160,255,0.3);
+}
+
+
+/* =================================
+   4. MAIN BOX
+================================= */
+
+.mainbox {
+  width: 100%;
+  padding: 12px;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    145deg,
+    rgba(35,43,54,0.95),
+    rgba(15,20,28,0.98)
+  );
+
+  border: 1px solid #465363;
+  border-radius: 12px;
+
+  box-shadow:
+    inset 0 2px 8px rgba(0,0,0,0.6);
+}
+
+
+/* =================================
+   5. DISPLAY
+================================= */
+
+.displaybox {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.displaybox input {
+  width: 100%;
+  height: 70px;
+
+  padding: 10px 12px ;
+
+  background: #dce5ed;
+  color: #111820;
+
+  border: 3px solid #65778b;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 38px;
+  font-weight: 600;
+  text-align: right;
+
+  box-shadow:inset 0 3px 7px rgba(0,0,0,0.3),0 2px 5px rgba(0,0,0,0.3);
+}
+.dualdisplay{
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 7px;
+}
+.dualdisplay input{
+  width: 100%;
+  height: 55px;
+
+  padding: 10px 12px ;
+
+  background: #dce5ed;
+  color: #111820;
+
+  border: 3px solid #65778b;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+
+  box-shadow:inset 0 3px 7px rgba(0,0,0,0.3),0 2px 5px rgba(0,0,0,0.3);
+}
+
+
+/* =================================
+   6. CATEGORY BUTTONS
+================================= */
+
+.categorybox {
+  width: 100%;
+  padding: 5px 0 12px;
+}
+
+.cate-row,
+.cate-row2 {
+  display: flex;
+  gap: 8px;
+}
+
+.cate-row {
+  margin-bottom: 8px;
+}
+
+.categorybox button {
+  flex: 1;
+  min-width: 0;
+  height: 42px;
+
+  padding:5px 0 ;
+
+  background: linear-gradient(
+    145deg,
+    #3d4857,
+    #252e3a
+  );
+
+  color: #e5edf5;
+
+  border: 1px solid #8190a1;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 0 #10151c;
+
+  transition: 0.12s ease;
+}
+
+/* Selected category */
+
+.categorybox button.selected {
+  background: linear-gradient(
+    145deg,
+    #39a9ed,
+    #1768a8
+  );
+
+  color: white;
+  border: 1px solid #9bd9ff;
+
+  box-shadow:
+    0 3px 0 #10436c,
+    0 0 10px rgba(40,150,230,0.35);
+}
+
+
+/* =================================
+   7. OPERATION AREA
+================================= */
+
+.operation {
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.oprow,
+.oprow2,
+.oprow3,
+.oprow4,
+.oprow5,
+.oprow6,
+.oprow7,
+.oprow8{
+  display: flex;
+  gap: 7px;
+  width: 100%;
+}
+
+.oprow button,
+.oprow2 button,
+.oprow3 button,
+.oprow5 button,
+.oprow6 button,
+.oprow7 button,
+.oprow8 button,
+.oprow4 button {
+  flex: 1;
+  min-width: 0;
+
+  padding: 7px 2px;
+
+  background: linear-gradient(
+    145deg,
+    #f5a63e,
+    #d87516
+  );
+
+  color: #171717;
+
+  border: 1px solid #ffcb83;
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 0 #87430e;
+
+  transition: 0.12s ease;
+}
+
+
+/* Operation hover */
+
+.operation button:hover {
+  filter: brightness(1.15);
+}
+
+
+/* Binary headings */
+
+#p1,
+#p2 {
+  margin: 4px 0 7px;
+  color: #55b9f5;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* Mensuration spacing */
+
+.oprow4 {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.oprow6,
+.oprow9,
+.oprow7 {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 7px;
+}
+
+.oprow8 {
+  margin-top: 7px;
+}
+
+
+/* =================================
+   8. KEYPAD
+================================= */
+
+.keypad {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.keypad .row1,
+.keypad .row2,
+.keypad .row3,
+.keypad .row4 {
+  display: flex;
+  gap: 9px;
+  width: 100%;
+}
+
+
+/* All keypad buttons same size */
+
+.keypad button {
+  flex: 1;
+  min-width: 0;
+
+  height: 57px;
+  padding: 0;
+
+  background: linear-gradient(
+    145deg,
+    #a9b8cb,
+    #657b98
+  );
+
+  color: #101820;
+
+  border: 1px solid #e0e9f3;
+  border-radius: 9px;
+
+  font-size: 23px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 0 #394b60,
+    0 5px 8px rgba(0,0,0,0.35);
+
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    filter 0.08s ease;
+}
+
+
+/* =================================
+   9. SPECIAL BUTTONS
+================================= */
+
+.row1 .allc,
+.row4 .del {
+  background: linear-gradient(
+    145deg,
+    #e36b6b,
+    #a52d38
+  );
+
+  color: white;
+  border-color: #ffaaaa;
+
+  box-shadow: 0 4px 0 #70202a;
+}
+
+.row4 .equal {
+  background: linear-gradient(
+    145deg,
+    #50d69a,
+    #168b62
+  );
+
+  color: #061b12;
+  border-color: #a0ffd1;
+
+  box-shadow: 0 4px 0 #07553b;
+}
+
+
+/* =================================
+   10. BUTTON PRESS EFFECT
+================================= */
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.keypad button:active,
+.categorybox button:active,
+.operation button:active {
+  transform: translateY(3px);
+
+  box-shadow: 0 0 0 transparent;
+
+  filter: brightness(0.9);
+}
+
+
+/* =================================
+   11. FOCUS EFFECT
+================================= */
+
+button:focus {
+  outline: none;
+}
+
+
+/* =================================
+   12. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 450px) {
+
+  .main {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .mainbox {
+    padding: 9px;
+  }
+
+  .keypad button {
+    height: 54px;
+    font-size: 21px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .categorybox button {
+    font-size: 15px;
+  }
+}
